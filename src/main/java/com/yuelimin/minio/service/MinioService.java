@@ -351,6 +351,6 @@ public class MinioService {
      */
     public String getUtf8ByURLDecoder(String str) throws UnsupportedEncodingException {
         String url = str.replaceAll("%(?![0-9a-fA-F]{2})", "%25");
-        return URLDecoder.decode(url, StandardCharsets.UTF_8);
+        return URLDecoder.decode(url, StandardCharsets.UTF_8.name());
     }
 }
